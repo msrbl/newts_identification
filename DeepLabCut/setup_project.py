@@ -1,3 +1,8 @@
 import deeplabcut
 
-deeplabcut.create_new_project("Tritons ReID", "msrbl", ["D:\\university\\ProjectWorkshop\\SBER Reindeintification of newts\\data\\keypointed dataset\\Ribbed newts\\images", "D:\\university\\ProjectWorkshop\\SBER Reindeintification of newts\\data\\keypointed dataset\\Triton Karelina\\images"], working_directory="D:\\university\\ProjectWorkshop\\SBER Reindeintification of newts\\newts_identification\\DeepLabCut", multianimal=True)
+deeplabcut.create_new_project(
+    "Tritons ReID", 
+    "msrbl", 
+    ["D:\\university\\ProjectWorkshop\\SBER Reindeintification of newts\\data\\keypointed dataset\\Ribbed newts\\images", "D:\\university\\ProjectWorkshop\\SBER Reindeintification of newts\\data\\keypointed dataset\\Triton Karelina\\images"], 
+    working_directory="D:\\university\\ProjectWorkshop\\SBER Reindeintification of newts\\newts_identification\\DeepLabCut", 
+    multianimal=False)

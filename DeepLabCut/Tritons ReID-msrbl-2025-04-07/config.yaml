@@ -1,18 +1,18 @@
 # Project definitions (do not edit)
 Task: Tritons ReID
 scorer: msrbl
-date: Apr4
-multianimalproject: true
-identity: false
+date: Apr7
+multianimalproject: false
+identity:
 
 
 # Project path (change when moving around)
 project_path: D:\university\ProjectWorkshop\SBER Reindeintification of newts\newts_identification\DeepLabCut\Tritons
-  ReID-msrbl-2025-04-04
+  ReID-msrbl-2025-04-07
 
 
 # Default DeepLabCut engine to use for shuffle creation (either pytorch or tensorflow)
-engine: tensorflow
+engine: pytorch
 
 
 # Annotation data set configuration (and individual video cropping parameters)
@@ -411,16 +411,11 @@ video_sets:
   ? D:\university\ProjectWorkshop\SBER Reindeintification of newts\data\keypointed
     dataset\Triton Karelina\images\84-01-1224.jpg
   : crop: 0, 4032, 0, 3024
-individuals:
-- individual1
-- individual2
-- individual3
-uniquebodyparts: []
-multianimalbodyparts:
+bodyparts:
 - bodypart1
 - bodypart2
 - bodypart3
-bodyparts: MULTI!
+- objectA
 
 
 # Fraction of video to start/stop when extracting frames for labeling/refinement
@@ -433,9 +428,7 @@ numframes2pick: 20
 skeleton:
 - - bodypart1
   - bodypart2
-- - bodypart2
-  - bodypart3
-- - bodypart1
+- - objectA
   - bodypart3
 skeleton_color: black
 pcutoff: 0.6
@@ -448,12 +441,12 @@ colormap: rainbow
 TrainingFraction:
 - 0.95
 iteration: 0
-default_net_type: dlcrnet_ms5
-default_augmenter: multi-animal-imgaug
-default_track_method: ellipse
+default_net_type: resnet_50
+default_augmenter: default
 snapshotindex: -1
 detector_snapshotindex: -1
 batch_size: 8
+detector_batch_size: 1
 
 
 # Cropping Parameters (for analysis and outlier frame detection)
@@ -474,4 +467,3 @@ move2corner: true
 
 # Conversion tables to fine-tune SuperAnimal weights
 SuperAnimalConversionTables:
-detector_batch_size: 1
