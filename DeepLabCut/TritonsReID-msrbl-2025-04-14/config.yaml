@@ -7,8 +7,8 @@ identity:
 
 
 # Project path (change when moving around)
-project_path: D:\university\ProjectWorkshop\SBER Reindeintification of newts\newts_identification\DeepLabCut\Tritons
-  ReID-msrbl-2025-04-14
+# project_path: /content/newts_identification/DeepLabCut/TritonsReID-msrbl-2025-04-14
+project_path: D:\university\ProjectWorkshop\SBER Reindeintification of newts\newts_identification\DeepLabCut\TritonsReID-msrbl-2025-04-14
 
 
 # Default DeepLabCut engine to use for shuffle creation (either pytorch or tensorflow)
