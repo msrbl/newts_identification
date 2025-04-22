@@ -3,8 +3,8 @@ import csv
 import json
 
 def get_keypoints_for_image(current_path, image_file):
-    json_path1 = r"D:\university\ProjectWorkshop\SBER Reindeintification of newts\newts_identification\DeepLabCut\instances.json"
-    json_path2 = r"D:\university\ProjectWorkshop\SBER Reindeintification of newts\newts_identification\DeepLabCut\instances1.json"
+    json_path1 = "./instances.json"
+    json_path2 = "./instances1.json"
 
     for json_path in [json_path1, json_path2]:
         with open(json_path, mode="r", encoding="utf-8") as json_file:
@@ -115,5 +115,5 @@ def create_csv_in_subfolders(root_dir):
             writer.writerow(row4)
 
 if __name__ == '__main__':
-    root_directory = r"D:\university\ProjectWorkshop\SBER Reindeintification of newts\newts_identification\DeepLabCut\Tritons ReID-msrbl-2025-04-14\labeled-data"
+    root_directory = r"D:\university\ProjectWorkshop\SBER Reindeintification of newts\newts_identification\DeepLabCut\TritonsReID-msrbl-2025-04-14\labeled-data"
     create_csv_in_subfolders(root_directory)
