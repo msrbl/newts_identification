@@ -1,59 +1,20 @@
-SuperAnimalConversionTables: null
+# Project definitions (do not edit)
 Task: Tritons ReID
-TrainingFraction:
-- 0.95
-alphavalue: 0.7
-batch_size: 8
-bodyparts:
-- bodypart1
-- bodypart2
-- bodypart3
-- bodypart4
-- bodypart5
-- bodypart6
-- bodypart7
-- bodypart8
-- bodypart9
-- bodypart10
-- bodypart11
-- bodypart12
-- bodypart13
-- bodypart14
-- bodypart15
-- bodypart16
-- bodypart17
-- bodypart18
-- bodypart19
-- bodypart20
-- bodypart21
-colormap: rainbow
-corner2move2:
-- 50
-- 50
-cropping: false
-date: Apr14
-default_augmenter: default
-default_net_type: resnet_50
-detector_batch_size: 1
-detector_snapshotindex: -1
-dotsize: 35
-engine: pytorch
-identity: null
-iteration: 0
-move2corner: false
-multianimalproject: false
-numframes2pick: 1
-pcutoff: 0.6
-
-project_path: /content/newts_identification/DeepLabCut/TritonsReID-msrbl-2025-04-14
-# project_path: D:\university\ProjectWorkshop\SBER Reindeintification of newts\newts_identification\DeepLabCut\TritonsReID-msrbl-2025-04-14
-
 scorer: msrbl
-skeleton: []
-skeleton_color: black
-snapshotindex: -1
-start: 0
-stop: 1
+date: Apr14
+multianimalproject: false
+identity:
+
+
+# Project path (change when moving around)
+project_path: D:\university\ProjectWorkshop\SBER Reindeintification of newts\newts_identification\DeepLabCut\TritonsReID-msrbl-2025-04-14
+
+
+# Default DeepLabCut engine to use for shuffle creation (either pytorch or tensorflow)
+engine: pytorch
+
+
+# Annotation data set configuration (and individual video cropping parameters)
 video_sets:
   D:\university\ProjectWorkshop\SBER Reindeintification of newts\data\keypointed dataset\Ribbed newts\images\01-01 (1).jpg:
     crop: 0, 756, 0, 1008
@@ -449,7 +410,72 @@ video_sets:
   ? D:\university\ProjectWorkshop\SBER Reindeintification of newts\data\keypointed
     dataset\Triton Karelina\images\84-01-1224.jpg
   : crop: 0, 756, 0, 1008
+bodyparts:
+- bodypart1
+- bodypart2
+- bodypart3
+- bodypart4
+- bodypart5
+- bodypart6
+- bodypart7
+- bodypart8
+- bodypart9
+- bodypart10
+- bodypart11
+- bodypart12
+- bodypart13
+- bodypart14
+- bodypart15
+- bodypart16
+- bodypart17
+- bodypart18
+- bodypart19
+- bodypart20
+- bodypart21
+
+
+# Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 1
+
+
+# Plotting configuration
+skeleton: []
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 35
+alphavalue: 0.7
+colormap: rainbow
+
+
+# Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+detector_snapshotindex: -1
+batch_size: 8
+detector_batch_size: 1
+
+
+# Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+#if cropping is true for analysis, then set the values here:
 x1: 0
 x2: 640
 y1: 277
 y2: 624
+
+
+# Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: false
+
+
+# Conversion tables to fine-tune SuperAnimal weights
+SuperAnimalConversionTables:
