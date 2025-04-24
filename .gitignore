@@ -1,8 +1,3 @@
-*_labeled/
-dlc-models-pytorch/
-data_aggregation/
-temp.py
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
